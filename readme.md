@@ -1,7 +1,5 @@
 # Writer Colorscheme for Vim
 
-**Maintainer:**     Nathan Long - [nathan-long.com](http://www.nathan-long.com)
-
 ----
 
 This colorscheme was based off two "distraction free" environments,
