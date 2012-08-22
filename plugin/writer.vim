@@ -15,9 +15,11 @@ else
   let g:writer_theme = expand(g:writer_theme)
 endif
 
+let s:writer_theme = g:writer_theme
+
 "Sets up Writer environment
 fu! WriterInit()
-  exe ':set background=' . g:writer_theme
+  let &background = s:writer_theme
   colorscheme writer
   setlocal fuopt=background:Normal lines=999 columns=80 fullscreen spell nonumber
 endfunction
@@ -29,6 +31,20 @@ fu! WriterJournal()
   exe ':call WriterInit()'
 endfu
 
+"Switch themes while in fullscreen mode
+fu! WriterSwitch()
+    let g:writer_background = &background
+    if g:writer_background == 'dark'
+        setlocal nofullscreen
+        let &background = 'light'
+        setlocal fullscreen
+    else
+        setlocal nofullscreen
+        let &background = 'dark'
+        setlocal fullscreen
+    endif
+endfu
+
 "Exit fullscreen and source defaults
 fu! WriterClose()
   setlocal nofullscreen
@@ -38,4 +54,5 @@ endfu
 
 map <leader>wr :call WriterInit()<CR>
 map <leader>wj :call WriterJournal()<CR>
+map <leader>wq :call WriterSwitch()<CR>
 map <leader>wc :call WriterClose()<CR>

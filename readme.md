@@ -32,6 +32,8 @@ there are a few ways to control Writer:
 `<leader>wj` - Creates a new dated journal file (format: YYMMDD.md) inside
 your specified journal directory.
 
+`<leader>wq` - Switches between dark and light themes while in fullscreen mode
+
 `<leader>wc` - Closes writer and reapplies your defaults
 
 ## Customization
@@ -47,22 +49,6 @@ And to choose which theme to load on default:
     let g:writer_theme = dark
 
 (The default is the light theme.)
-
-## Switching Between the Two Themes On The Fly
-
-Since this leans heavily on the innovations of Solarized, you can use
-Solarized's built in background switching plugin to switch between the dark
-(WriteRoom) and the light (IAWriter) themes.
-
-If you don't have that plugin installed run:
-
-    set bg=dark
-
-For the dark scheme, and for the light:
-
-    set bg=light
-
-Thats it, hope you enjoy it!
 
 ---
 
