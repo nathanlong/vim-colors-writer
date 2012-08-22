@@ -1,0 +1,35 @@
+*writer.txt*  Distaction free writing environment for Vim            *writer*
+
+A minimal colorscheme with both a light and dark version with a few small
+functions that make it easy to isolate your writing.
+
+==============================================================================
+ 1.- COMMANDS                                               *writer-commands*
+
+                                                *<leader>wr*
+<leader>wr              Loads writer into your current buffer.
+
+                                                *<leader>wj*
+<leader>wj              Creates a new dated journal file (format: YYMMDD.md)
+                        inside your specified journal directory.
+
+                                                *<leader>wq*
+<leader>wq              Switches between dark and light themes while in
+                        fullscreen mode
+
+                                                *<leader>wc*
+<leader>wc              Closes writer and reapplies your defaults.
+
+==============================================================================
+ 2.- CUSTOMIZATION                                         *writer-customize*
+
+To customize your 'journal' directory, add this to your vimrc:
+
+    let g:writer_journal_dir = 'path/to/journal/'                            ~
+
+And to choose which theme to load on default:
+
+    let g:writer_theme = dark                                               ~
+
+
+vim:tw=78:et:ft=help:norl:

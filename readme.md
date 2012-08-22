@@ -3,31 +3,32 @@
 This colorscheme was based off two "distraction free" environments,
 [WriteRoom](http://www.hogbaysoftware.com/products/writeroom) and
 [IAWriter](http://www.iawriter.com/). Since I use Vim for everything involving
-text I recreated these environments for myself. I've also shamelessly copied
-Ethan Schoover's definition and variable structure from his [Solarized
-theme](https://github.com/altercation/vim-colors-solarized) (which is
-a brilliant theme!).
+text I recreated these environments for myself. 
+
+I've also shamelessly copied Ethan Schoover's definition and variable
+structure from his [Solarized
+theme](https://github.com/altercation/vim-colors-solarized) (I highly
+recommend this theme).
 
 At its core it's a highly minimal colorscheme with both a light and dark
 version with a few small functions that make it easy to isolate your writing.
-
 
 ## Installation:
 
 If you run Pathogen to manage your plugins, you can clone this into your
 bundles folder:
 
-    git clone git://github.com/nathanlong/vim-colors-writer.git ~/.vim/bundle/colors-writer
+    git clone git://github.com/nathanlong/vim-colors-writer.git
+    ~/.vim/bundle/colors-writer
 
 Or you can just download it and pop it into your `.vim/colors/` and
 `.vim/plugins` directories.
 
 ## Features
 
-I mostly use this to focus on what I'm writing or when I want to journal, so
-there are a few ways to control Writer:
+Basic Commands:
 
-`<leader>wr` - Loads writer with your current buffer
+`<leader>wr` - Loads writer into your current buffer
 
 `<leader>wj` - Creates a new dated journal file (format: YYMMDD.md) inside
 your specified journal directory.
@@ -38,7 +39,7 @@ your specified journal directory.
 
 ## Customization
 
-I've included a few options for customization:
+I've also included a few options for customization:
 
 To customize your 'journal' directory, add this to your vimrc:
 
