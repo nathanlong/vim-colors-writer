@@ -1,19 +1,18 @@
 # Writer Colorscheme for Vim
 
-This colorscheme was based off two "distraction free" environments,
+Writer is a minimal colorscheme for Vim built to isolate your writing. It's
+based off of two "distraction free" environments,
 [WriteRoom](http://www.hogbaysoftware.com/products/writeroom) and
 [IAWriter](http://www.iawriter.com/). Since I use Vim for everything involving
-text I recreated these environments for myself. 
+text I recreated these environments for myself. (If you do not use/care to
+learn Vim, I'd recommend you check out both products.)
 
-I've also shamelessly copied Ethan Schoover's definition and variable
-structure from his [Solarized
-theme](https://github.com/altercation/vim-colors-solarized) (I highly
-recommend this theme).
+I've also <del>shamelessly copied</del> borrowed Ethan
+Schoover's definition and variable structure from his [Solarized
+theme](https://github.com/altercation/vim-colors-solarized) (Which I also highly
+recommend).
 
-At its core it's a highly minimal colorscheme with both a light and dark
-version with a few small functions that make it easy to isolate your writing.
-
-## Installation:
+## Installation
 
 If you run Pathogen to manage your plugins, you can clone this into your
 bundles folder:
@@ -24,9 +23,7 @@ bundles folder:
 Or you can just download it and pop it into your `.vim/colors/` and
 `.vim/plugins` directories.
 
-## Features
-
-Basic Commands:
+## Commands
 
 `<leader>wr` - Loads writer into your current buffer
 
