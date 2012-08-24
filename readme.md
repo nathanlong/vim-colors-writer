@@ -14,6 +14,10 @@ recommend).
 
 ## Installation
 
+> Note: Writer was built with only [MacVim](http://code.google.com/p/macvim/)
+> in mind. It will not work in the terminal, and I have not tested it on other
+> Vim GUI wrappers. If you'd like support for your GUI wrapper, please contribute!
+
 If you run Pathogen to manage your plugins, you can clone this into your
 bundles folder:
 
