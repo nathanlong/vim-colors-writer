@@ -1,6 +1,6 @@
 " Writer.vim - Distraction free writing environment for Vim. Huzzah!
 " Maintainer:   Nathan Long (www.nathan-long.com)
-" Version:      0.2
+" Version:      0.3
 
 "Plugin Variables
 if !exists('g:writer_journal_dir')
@@ -25,10 +25,14 @@ fu! WriterInit()
 endfunction
 
 "Opens a journal file in specified directory
-fu! WriterJournal()
+fu! WriterJournal(arg)
   let s:today = strftime("%y%m%d")
   exe ':e' . g:writer_journal_dir . s:today . ".md"
-  exe ':call WriterInit()'
+  if a:arg == 'off'
+    echo 'Journal opened. Writer off.'
+  elseif a:arg == 'on'
+    call WriterInit()
+  endif
 endfu
 
 "Switch themes while in fullscreen mode
@@ -53,6 +57,7 @@ fu! WriterClose()
 endfu
 
 map <leader>wr :call WriterInit()<CR>
-map <leader>wj :call WriterJournal()<CR>
+map <leader>wj :call WriterJournal('on')<CR>
+map <leader>wJ :call WriterJournal('off')<CR>
 map <leader>wq :call WriterSwitch()<CR>
 map <leader>wc :call WriterClose()<CR>
