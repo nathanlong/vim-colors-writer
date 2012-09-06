@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Writer by nathanlong</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Writer</h1>
+        <p>Distraction-free writing environment for Vim, with markdown and journal support.</p>
+
+        <p class="view"><a href="https://github.com/nathanlong/vim-colors-writer">View the Project on GitHub <small>nathanlong/vim-colors-writer</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/nathanlong/vim-colors-writer/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/nathanlong/vim-colors-writer/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/nathanlong/vim-colors-writer">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Writer is a minimal colorscheme for Vim built to isolate your writing (All the
+cool kids are doing it these days.) It's got two themes, light and dark (which
+you can switch between on the fly) and some basic usage functions to help stop
+fooling around and start making 'clackety noise' (via
+<a href="http://twitter.com/hotdogsladies">@hotdogsladies</a>).</p>
+
+<p>It's based off of two "distraction free" environments,
+<a href="http://www.hogbaysoftware.com/products/writeroom">WriteRoom</a> and
+<a href="http://www.iawriter.com/">IAWriter</a>. Since I use Vim for everything involving
+text I recreated these environments for myself. (If you do not use/care to
+learn Vim, I'd recommend you check out both products.)</p>
+
+<p>I've also <del>shamelessly copied</del> borrowed Ethan
+Schoover's definition and variable structure from his <a href="https://github.com/altercation/vim-colors-solarized">Solarized
+theme</a> (Which I also highly
+recommend).</p>
+
+<h2>Installation</h2>
+
+<blockquote>
+<p>Note: Writer was built with only <a href="http://code.google.com/p/macvim/">MacVim</a>
+in mind. It will not work in the terminal, and I have not tested it on other
+Vim GUI wrappers. If you'd like support for your GUI wrapper, please contribute!</p>
+</blockquote>
+
+<p>If you run Pathogen to manage your plugins, you can clone this into your
+bundles folder:</p>
+
+<pre><code>git clone git://github.com/nathanlong/vim-colors-writer.git
+~/.vim/bundle/colors-writer
+</code></pre>
+
+<p>Or you can just download it and pop it into your <code>.vim/colors/</code> and
+<code>.vim/plugins</code> directories.</p>
+
+<h2>Commands</h2>
+
+<p><code>&lt;leader&gt;wr</code> - Loads writer into your current buffer</p>
+
+<p><code>&lt;leader&gt;wj</code> - Creates a new dated journal file (format: YYMMDD.md) inside
+your specified journal directory.</p>
+
+<p><code>&lt;leader&gt;wq</code> - Switches between dark and light themes while in fullscreen mode</p>
+
+<p><code>&lt;leader&gt;wc</code> - Closes writer and reapplies your defaults</p>
+
+<h2>Customization</h2>
+
+<p>I've also included a few options for customization:</p>
+
+<p>To customize your 'journal' directory, add this to your vimrc:</p>
+
+<pre><code>let g:writer_journal_dir = 'path/to/journal/'
+</code></pre>
+
+<p>And to choose which theme to load on default:</p>
+
+<pre><code>let g:writer_theme = dark
+</code></pre>
+
+<p>(The default is the light theme.)</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/nathanlong">nathanlong</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
