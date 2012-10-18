@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
@@ -11,6 +11,14 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <title>Writer by nathanlong</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+      $('.toggle-theme').click(function(){
+         $('body').toggleClass('light'); 
+      });
+      });
+    </script>
   </head>
 
   <body>
@@ -26,78 +34,75 @@
           <a href="https://github.com/nathanlong/vim-colors-writer/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
           <a href="https://github.com/nathanlong/vim-colors-writer/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
           <a href="https://github.com/nathanlong/vim-colors-writer" id="view-on-github" class="button"><span>View on GitHub</span></a>
+          <span class="toggle-theme">Toggle Theme</span>
         </section>
 
         <hr>
 
         <section id="main_content">
           <p>Writer is a minimal colorscheme for Vim built to isolate your writing (All the
-cool kids are doing it these days.) It's got two themes, light and dark (which
-you can switch between on the fly) and some basic usage functions to help stop
-fooling around and start making 'clackety noise' (via
-<a href="http://twitter.com/hotdogsladies">@hotdogsladies</a>).</p>
+            cool kids are doing it these days.) It's got two themes, light and dark (which
+            you can switch between on the fly) and some basic usage functions to help stop
+            fooling around and start making 'clackety noise' (via
+            <a href="http://twitter.com/hotdogsladies">@hotdogsladies</a>).</p>
 
-<p>It's based off of two "distraction free" environments,
-<a href="http://www.hogbaysoftware.com/products/writeroom">WriteRoom</a> and
-<a href="http://www.iawriter.com/">IAWriter</a>. Since I use Vim for everything involving
-text I recreated these environments for myself. (If you do not use/care to
-learn Vim, I'd recommend you check out both products.)</p>
+          <p>It's based off of two "distraction free" environments,
+            <a href="http://www.hogbaysoftware.com/products/writeroom">WriteRoom</a> and
+            <a href="http://www.iawriter.com/">IAWriter</a>. Since I use Vim for everything involving
+            text I recreated these environments for myself. (If you do not use/care to
+            learn Vim, I'd recommend you check out both products.)</p>
 
-<p>I've also <del>shamelessly copied</del> borrowed Ethan
-Schoover's definition and variable structure from his <a href="https://github.com/altercation/vim-colors-solarized">Solarized
-theme</a> (Which I also highly
-recommend).</p>
+          <p>I've also <del>shamelessly copied</del> borrowed Ethan
+            Schoover's definition and variable structure from his <a href="https://github.com/altercation/vim-colors-solarized">Solarized
+              theme</a> (Which I also highly
+            recommend).</p>
 
-<h2>Installation</h2>
+          <h2>Installation</h2>
 
-<blockquote>
-<p>Note: Writer was built with only <a href="http://code.google.com/p/macvim/">MacVim</a>
-in mind. It will not work in the terminal, and I have not tested it on other
-Vim GUI wrappers. If you'd like support for your GUI wrapper, please contribute!</p>
-</blockquote>
+          <blockquote>
+            <p>Note: Writer was built with only <a href="http://code.google.com/p/macvim/">MacVim</a>
+              in mind. It will not work in the terminal, and I have not tested it on other
+              Vim GUI wrappers. If you'd like support for your GUI wrapper, please contribute!</p>
+          </blockquote>
 
-<p>If you run Pathogen to manage your plugins, you can clone this into your
-bundles folder:</p>
+          <p>If you run Pathogen to manage your plugins, you can clone this into your
+            bundles folder:</p>
 
 <pre><code>git clone git://github.com/nathanlong/vim-colors-writer.git
 ~/.vim/bundle/colors-writer
 </code></pre>
 
-<p>Or you can just download it and pop it into your <code>.vim/colors/</code> and
-<code>.vim/plugins</code> directories.</p>
+            <p>Or you can just download it and pop it into your <code>.vim/colors/</code> and
+              <code>.vim/plugins</code> directories.</p>
 
-<h2>Commands</h2>
+            <h2>Commands</h2>
 
-<p><code>&lt;leader&gt;wr</code> - Loads writer into your current buffer</p>
+            <p><code>&lt;leader&gt;wr</code> - Loads writer into your current buffer</p>
 
-<p><code>&lt;leader&gt;wj</code> - Creates a new dated journal file (format: YYMMDD.md) inside
-your specified journal directory.</p>
+            <p><code>&lt;leader&gt;wj</code> - Creates a new dated journal file (format: YYMMDD.md) inside
+              your specified journal directory.</p>
 
-<p><code>&lt;leader&gt;wq</code> - Switches between dark and light themes while in fullscreen mode</p>
+            <p><code>&lt;leader&gt;wq</code> - Switches between dark and light themes while in fullscreen mode</p>
 
-<p><code>&lt;leader&gt;wc</code> - Closes writer and reapplies your defaults</p>
+            <p><code>&lt;leader&gt;wc</code> - Closes writer and reapplies your defaults</p>
 
-<h2>Customization</h2>
+            <h2>Customization</h2>
 
-<p>I've also included a few options for customization:</p>
+            <p>I've also included a few options for customization:</p>
 
-<p>To customize your 'journal' directory, add this to your vimrc:</p>
+            <p>To customize your 'journal' directory, add this to your vimrc:</p>
 
 <pre><code>let g:writer_journal_dir = 'path/to/journal/'
 </code></pre>
 
-<p>And to choose which theme to load on default:</p>
+            <p>And to choose which theme to load on default:</p>
 
 <pre><code>let g:writer_theme = dark
 </code></pre>
 
-<p>(The default is the light theme.)</p>
-        </section>
+            <p>(The default is the light theme.)</p>
+          </section>
 
-        <footer>
-          Writer is maintained by <a href="https://github.com/nathanlong">nathanlong</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
 
         
       </div>
