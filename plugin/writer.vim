@@ -1,6 +1,6 @@
 " Writer.vim - Distraction free writing environment for Vim. Huzzah!
 " Maintainer:   Nathan Long (www.nathan-long.com)
-" Version:      0.3
+" Version:      0.4
 
 "Plugin Variables
 if !exists('g:writer_journal_dir')
@@ -21,6 +21,10 @@ let s:writer_theme = g:writer_theme
 fu! WriterInit()
   let &background = s:writer_theme
   colorscheme writer
+  if exists('g:Powerline_loaded') || !g:Powerline_loaded
+    let g:Powerline_colorscheme = "writer"
+    exe ':PowerlineReloadColorscheme'
+  endif
   setlocal fuopt=background:Normal lines=999 columns=80 fullscreen spell nonumber
 endfunction
 
@@ -47,6 +51,9 @@ fu! WriterSwitch()
         let &background = 'dark'
         setlocal fullscreen
     endif
+    if exists('g:Powerline_loaded') || !g:Powerline_loaded
+        exe ':PowerlineReloadColorscheme'
+    endif
 endfu
 
 "Exit fullscreen and source defaults
@@ -54,6 +61,9 @@ fu! WriterClose()
   setlocal nofullscreen
   so $MYVIMRC
   so $MYGVIMRC
+  if exists('g:Powerline_loaded') || !g:Powerline_loaded
+    exe ':PowerlineReloadColorscheme'
+  endif
 endfu
 
 map <leader>wr :call WriterInit()<CR>
@@ -61,3 +71,4 @@ map <leader>wj :call WriterJournal('on')<CR>
 map <leader>wJ :call WriterJournal('off')<CR>
 map <leader>wq :call WriterSwitch()<CR>
 map <leader>wc :call WriterClose()<CR>
+
