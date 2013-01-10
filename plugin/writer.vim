@@ -26,6 +26,7 @@ fu! WriterInit()
     exe ':PowerlineReloadColorscheme'
   endif
   setlocal fuopt=background:Normal lines=999 columns=80 fullscreen spell nonumber
+  au BufUnload <buffer> call WriterClose()
 endfunction
 
 "Opens a journal file in specified directory
