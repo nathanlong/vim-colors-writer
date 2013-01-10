@@ -54,11 +54,11 @@ body {
   background: #000;
   font-family: 'Inconsolata', Helvetica, Arial, serif;
   color: #216e35;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition:    all 0.5s ease-in-out;
-  -ms-transition:     all 0.5s ease-in-out;
-  -o-transition:      all 0.5s ease-in-out;
-  transition:         all 0.5s ease-in-out;
+  -webkit-transition: all 0..5s ease-in-out;
+  -moz-transition:    all 0..5s ease-in-out;
+  -ms-transition:     all 0..5s ease-in-out;
+  -o-transition:      all 0..5s ease-in-out;
+  transition:         all 0..5s ease-in-out;
 }
 
 body.light {
@@ -124,10 +124,6 @@ header h2 {
   max-width: 100%;
 }
 
-#downloads {
-  margin-bottom: 40px;
-}
-
 a.button {
   border-top: solid 1px #13401f;
   border-left: solid 1px #13401f;
@@ -179,35 +175,48 @@ a.button span {
   top: 10px;
   right: 10px;
   cursor: pointer;
-  background: #091f0f;
+  background: #00503c;
   padding: 6px;
-  border: 1px solid #13401f;
+  border: 1px solid #007a5a;
   display: block;
-  color: #216e35;
+  color: #000;
 }
 
 .light .toggle-theme {
-  color:  #4a413a;
-  background: #d4d5d9;
-  border-color: #968475;
+  color:  #fff;
+  background: #80d7ff;
+  border-color: #00aeff;
 }
 
 .toggle-theme:hover {
-  background: #fafafa;
-  border-color: #b3b3b3;1
+  background: #235257;
+  border-color: #307278;
 }
 
-#download-zip span {
-  background: transparent url(../images/zip-icon.png) 12px 50% no-repeat;
+.light .toggle-theme:hover {
+  background: #e8c24c;
+  border-color: #ab8f38;
 }
-#download-tar-gz span {
-  background: transparent url(../images/tar-gz-icon.png) 12px 50% no-repeat;
+
+#downloads {
+  margin-bottom: 30px;
+  text-align: center;
 }
-#view-on-github span {
-  background: transparent url(../images/octocat-icon.png) 12px 50% no-repeat;
+
+.download {
+  margin: 0 20px;
 }
+
 #view-on-github {
   margin-right: 0;
+}
+
+.cursor {
+  color: #007a5a;
+}
+
+.light .cursor {
+  color: #00aeff;
 }
 
 code, pre {
@@ -229,7 +238,7 @@ code {
 }
 
 pre {
-  padding: 20px;
+  padding: 10px;
   background: #091f0f;
   color: #428f55;
   text-shadow: none;
@@ -257,17 +266,7 @@ ul, ol, dl {
   margin-bottom: 20px;
 }
 
-
 /* COMMON STYLES */
-
-hr {
-  height: 1px;
-  line-height: 1px;
-  margin-top: 1em;
-  padding-bottom: 1em;
-  border: none;
-  background: transparent url('../images/hr.png') 50% 0 no-repeat;
-}
 
 strong {
   font-weight: bold;
@@ -353,10 +352,8 @@ p a {
 }
 
 blockquote {
-  border-left: 5px solid #235257;
   color: #307278;
   margin-bottom: 20px;
-  padding: 0 0 0 30px;
 }
 
 .light blockquote {
