@@ -25,7 +25,7 @@ fu! WriterInit()
     let g:Powerline_colorscheme = "writer"
     exe ':PowerlineReloadColorscheme'
   endif
-  setlocal fuopt=background:Normal lines=999 columns=80 fullscreen spell nonumber
+  setlocal fuopt=background:Normal lines=999 columns=90 fullscreen spell nonumber
   au BufUnload <buffer> call WriterClose()
 endfunction
 
