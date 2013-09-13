@@ -38,6 +38,13 @@ your specified journal directory.
 
 `<leader>wc` - Closes writer and reapplies your defaults
 
+`<D-b>` - Creates markdown style bold text (For this to work, you'll need to
+add the following to your .gvimrc:)
+
+    macmenu &Tools.Make key=<nop> 
+
+`<D-i>` - Creates markdown style italics text
+
 ## Customization
 
 I've also included a few options for customization:

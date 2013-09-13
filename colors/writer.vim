@@ -64,14 +64,14 @@ let s:vmode           = "gui"
 if &background == "light"
   let s:base1         = "#f0f2f1"
   let s:base2         = "#d4d5d9"
-  let s:text          = "#4a413a"
-  let s:textlo        = "#968475"
-  let s:texthi        = "#302a26"
+  let s:text          = "#555555"
+  let s:textlo        = "#a6a6a6"
+  let s:texthi        = "#2b2b2b"
   let s:altlo         = "#80d7ff"
   let s:althi         = "#00aeff"
   let s:accentlo      = "#e8c24c"
   let s:accenthi      = "#ab8f38"
-  let s:nearinv       = "#ededed"
+  let s:nearinv       = "#ebebeb"
   if (s:back != "NONE")
     let s:back        = s:base1
   endif
@@ -126,7 +126,8 @@ exe "hi! Comment"         .s:fmt_ital   .s:fg_textlo   .s:bg_none
 exe "hi! Constant"        .s:fmt_none   .s:fg_texthi   .s:bg_none
 exe "hi! Identifier"      .s:fmt_none   .s:fg_altlo    .s:bg_none
 exe "hi! Statement"       .s:fmt_none   .s:fg_althi    .s:bg_none
-exe "hi! PreProc"         .s:fmt_none   .s:fg_accentlo .s:bg_none
+exe "hi! Preproc"         .s:fmt_none   .s:fg_althi    .s:bg_none
+exe "hi! Delimiter"       .s:fmt_none   .s:fg_althi    .s:bg_none
 exe "hi! Type"            .s:fmt_none   .s:fg_textlo   .s:bg_none
 exe "hi! Special"         .s:fmt_none   .s:fg_texthi   .s:bg_none
 exe "hi! Underlined"      .s:fmt_none   .s:fg_texthi   .s:bg_none
@@ -145,7 +146,8 @@ exe "hi! IncSearch"       .s:fmt_stnd   .s:fg_accenthi  .s:bg_none
 exe "hi! Search"          .s:fmt_revr   .s:fg_accenthi  .s:bg_none
 exe "hi! MoreMsg"         .s:fmt_none   .s:fg_accenthi  .s:bg_none
 exe "hi! ModeMsg"         .s:fmt_none   .s:fg_textlo    .s:bg_none
-exe "hi! LineNr"          .s:fmt_none   .s:fg_nearinv   .s:bg_none
+exe "hi! LineNr"          .s:fmt_none   .s:fg_textlo   .s:bg_nearinv
+exe "hi! CursorLineNr"    .s:fmt_none   .s:fg_textlo   .s:bg_nearinv
 exe "hi! Question"        .s:fmt_bold   .s:fg_accentlo  .s:bg_none
 exe "hi! VertSplit"       .s:fmt_none   .s:fg_base2     .s:bg_base2
 exe "hi! Title"           .s:fmt_bold   .s:fg_accenthi  .s:bg_none
@@ -194,13 +196,11 @@ exe "hi! htmlH1"                        .s:fmt_bold    .s:fg_text     .s:bg_none
 exe "hi! htmlH2"                        .s:fmt_bold    .s:fg_text     .s:bg_none 
 exe "hi! htmlH3"                        .s:fmt_bold    .s:fg_text     .s:bg_none 
 exe "hi! htmlH4"                        .s:fmt_bold    .s:fg_text     .s:bg_none 
-exe "hi! markdownHeadingDelimiter"      .s:fmt_bold    .s:fg_althi    .s:bg_none 
 exe "hi! markdownListMarker"            .s:fmt_none    .s:fg_althi    .s:bg_none
 exe "hi! htmlString"                    .s:fmt_bold    .s:fg_accenthi .s:bg_none
 exe "hi! htmlItalic"                    .s:fmt_ital    .s:fg_text     .s:bg_none
 exe "hi! htmlBold"                      .s:fmt_bold    .s:fg_text     .s:bg_none
-exe "hi! markdownUrl"                   .s:fmt_none    .s:fg_althi   .s:bg_none
+exe "hi! markdownUrl"                   .s:fmt_none    .s:fg_althi    .s:bg_none
 exe "hi! markdownUrlTitle"              .s:fmt_none    .s:fg_accenthi .s:bg_none
 exe "hi! markdownLinkText"              .s:fmt_ital    .s:fg_accenthi .s:bg_none
-exe "hi! markdownCodeDelimiter"         .s:fmt_none    .s:fg_texthi   .s:bg_none
-exe "hi! Preproc"                       .s:fmt_none    .s:fg_althi    .s:bg_none
+exe "hi! markdownStyleDelimiter"        .s:fmt_none    .s:fg_textlo    .s:bg_none

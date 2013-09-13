@@ -20,14 +20,14 @@ if &background == "light"
 call Pl#Hi#Allocate({
   \ 'base1'    : [8,   0xf0f2f1],
   \ 'base2'    : [0,   0xd4d5d9],
-  \ 'text'     : [10,  0x4a413a],
-  \ 'textlo'   : [11,  0x968475],
-  \ 'texthi'   : [12,  0x302a26],
+  \ 'text'     : [10,  0x555555],
+  \ 'textlo'   : [11,  0x858585],
+  \ 'texthi'   : [12,  0x2b2b2b],
   \ 'altlo'    : [14,  0x80d7ff],
   \ 'althi'    : [7,   0x00aeff],
   \ 'accentlo' : [15,  0xe8c24c],
   \ 'accenthi' : [3,   0xab8f38],
-  \ 'nearinv'  : [9,   0xededed],
+  \ 'nearinv'  : [9,   0xebebeb],
 	\ })
 endif
 
@@ -47,15 +47,15 @@ let g:Powerline#Colorschemes#writer#colorscheme = Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['branch'], {
-		\ 'n': ['base1',   'textlo'],
-		\ 'N': ['base1',   'textlo'],
-		\ 'i': ['base1',   'textlo'],
+		\ 'n': ['textlo',   'altlo'],
+		\ 'N': ['textlo',   'altlo'],
+		\ 'i': ['textlo',   'altlo'],
 		\ }),
 	\
   \ Pl#Hi#Segments(['scrollpercent', 'raw', 'filesize'], {
-		\ 'n': ['base1',   'base2'],
-		\ 'N': ['base1',   'base2'],
-		\ 'i': ['base1',   'base2'],
+		\ 'n': ['text',   'base2'],
+		\ 'N': ['text',   'base2'],
+		\ 'i': ['text',   'base2'],
 		\ }),
 	\
 	\ Pl#Hi#Segments(['fileinfo', 'filename'], {
@@ -77,14 +77,14 @@ let g:Powerline#Colorschemes#writer#colorscheme = Pl#Colorscheme#Init([
 		\ }),
 	\
 	\ Pl#Hi#Segments(['fileinfo.flags'], {
-		\ 'n': ['base2'],
-		\ 'N': ['base2'],
-		\ 'i': ['base2'],
+		\ 'n': ['textlo'],
+		\ 'N': ['textlo'],
+		\ 'i': ['textlo'],
 		\ }),
 	\
 	\ Pl#Hi#Segments(['currenttag', 'fileformat', 'fileencoding', 'pwd', 'filetype', 'rvm:string', 'rvm:statusline', 'virtualenv:statusline', 'charcode', 'currhigroup'], {
-		\ 'n': ['base2', 'nearinv'],
-		\ 'i': ['base2', 'nearinv'],
+		\ 'n': ['textlo', 'base2'],
+		\ 'i': ['textlo', 'base2'],
 		\ }),
 	\
 	\ Pl#Hi#Segments(['lineinfo'], {

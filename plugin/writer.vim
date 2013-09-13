@@ -73,3 +73,16 @@ map <leader>wJ :call WriterJournal('off')<CR>
 map <leader>wq :call WriterSwitch()<CR>
 map <leader>wc :call WriterClose()<CR>
 
+"Inline controls for text styling
+
+"Bold
+"Make sure to disable the D-b combo in your gvimrc with:
+"macmenu &Tools.Make key=<nop>
+map <D-b> i****<esc>hi
+imap <D-b> ****<esc>hi
+vmap <D-b> S*<esc>v_gvS*
+
+"Italic
+map <D-i> i**<esc>i
+imap <D-i> **<esc>i
+vmap <D-i> S*
