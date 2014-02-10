@@ -21,10 +21,6 @@ let s:writer_theme = g:writer_theme
 fu! WriterInit()
   let &background = s:writer_theme
   colorscheme writer
-  if exists('g:Powerline_loaded') || !g:Powerline_loaded
-    let g:Powerline_colorscheme = "writer"
-    exe ':PowerlineReloadColorscheme'
-  endif
   setlocal fuopt=background:Normal lines=999 columns=90 fullscreen spell nonumber
   au BufUnload <buffer> call WriterClose()
 endfunction
@@ -52,9 +48,6 @@ fu! WriterSwitch()
         let &background = 'dark'
         setlocal fullscreen
     endif
-    if exists('g:Powerline_loaded') || !g:Powerline_loaded
-        exe ':PowerlineReloadColorscheme'
-    endif
 endfu
 
 "Exit fullscreen and source defaults
@@ -62,9 +55,6 @@ fu! WriterClose()
   setlocal nofullscreen
   so $MYVIMRC
   so $MYGVIMRC
-  if exists('g:Powerline_loaded') || !g:Powerline_loaded
-    exe ':PowerlineReloadColorscheme'
-  endif
 endfu
 
 map <leader>wr :call WriterInit()<CR>
