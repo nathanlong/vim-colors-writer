@@ -7,18 +7,25 @@ functions that make it easy to isolate your writing.
  1.- COMMANDS                                               *writer-commands*
 
                                                 *<leader>wr*
-<leader>wr              Loads writer into your current buffer.
+<leader>wr              Loads writer and isolates text in fullscreen.
+
+                                                *<leader>wR*
+<leader>wR              Loads writer into your current buffer, no fullscreen.
 
                                                 *<leader>wj*
 <leader>wj              Creates a new dated journal file (format: YYMMDD.md)
                         inside your specified journal directory.
+
+                                                *<leader>wJ*
+<leader>wJ              Creates a new dated journal file (format: YYMMDD.md)
+                        but does not launch writer.
 
                                                 *<leader>wq*
 <leader>wq              Switches between dark and light themes while in
                         fullscreen mode
 
                                                 *<leader>wc*
-<leader>wc              Closes writer and reapplies your defaults.
+<leader>wc              Closees writer and reapplies your defaults.
 
 ==============================================================================
  2.- CUSTOMIZATION                                         *writer-customize*

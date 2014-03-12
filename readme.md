@@ -7,43 +7,42 @@ based off of two "distraction free" environments,
 text I recreated these environments for myself. (If you do not use/care to
 learn Vim, I'd recommend you check out both products.)
 
-I've also <del>shamelessly copied</del> borrowed Ethan
-Schoover's definition and variable structure from his [Solarized
-theme](https://github.com/altercation/vim-colors-solarized) (Which I also highly
-recommend).
+This theme is built to be highly compatible with (and is based on) the
+[Solarized theme](https://github.com/altercation/vim-colors-solarized) and
+benefits greatly from the light/dark background toggle included with that
+theme.
+
+This theme was built for use with [MacVim](http://code.google.com/p/macvim/).
+I cannot guarantee it's compatibility in other platforms.
+
+There is a branch for Powerline users, but I have discontinued updating it.
 
 ## Installation
 
-> Note: Writer was built with only [MacVim](http://code.google.com/p/macvim/)
-> in mind. It will not work in the terminal, and I have not tested it on other
-> Vim GUI wrappers. If you'd like support for your GUI wrapper, please contribute!
+**Option 1:** Manual
 
-If you run Pathogen to manage your plugins, you can clone this into your
-bundles folder:
+    git clone git@github.com:nathanlong/vim-colors-writer.git
+    mv vim-colors-writer ~/vim/colors/
 
-    git clone git://github.com/nathanlong/vim-colors-writer.git
-    ~/.vim/bundle/colors-writer
+**Option 2:** Using Pathogen and git submodules (Recommended):
 
-Or you can just download it and pop it into your `.vim/colors/` and
-`.vim/plugins` directories.
+    git submodule add git@github.com:nathanlong/vim-colors-writer.git ~/.vim/bundle/colors-writer
 
 ## Commands
 
-`<leader>wr` - Loads writer into your current buffer
+`<leader>wr` - Loads writer into your current buffer and isolates text.
 
-`<leader>wj` - Creates a new dated journal file (format: YYMMDD.md) inside
+`<leader>wR` - Loads writer into your current buffer with no fullscreen
+
+`<leader>wj` - Creates a new dated journal file (format: YYMMDD.md) in
 your specified journal directory.
+
+`<leader>wJ` - Creates a new dated journal file (format: YYMMDD.md) but does
+not launch writer.
 
 `<leader>wq` - Switches between dark and light themes while in fullscreen mode
 
 `<leader>wc` - Closes writer and reapplies your defaults
-
-`<D-b>` - Creates markdown style bold text (For this to work, you'll need to
-add the following to your .gvimrc:)
-
-    macmenu &Tools.Make key=<nop> 
-
-`<D-i>` - Creates markdown style italics text
 
 ## Customization
 

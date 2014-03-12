@@ -1,6 +1,6 @@
 " Writer.vim - Distraction free writing environment for Vim. Huzzah!
 " Maintainer:   Nathan Long (www.nathan-long.com)
-" Version:      0.4
+" Version:      0.41
 
 "Plugin Variables
 if !exists('g:writer_journal_dir')
@@ -17,11 +17,15 @@ endif
 
 let s:writer_theme = g:writer_theme
 
-"Sets up Writer environment
-fu! WriterInit()
+"Sets up Writer environment, check for fullscreen ask
+fu! WriterInit(arg)
   let &background = s:writer_theme
   colorscheme writer
-  setlocal fuopt=background:Normal lines=999 columns=90 fullscreen spell nonumber
+  if a:arg == 'off'
+    setlocal fuopt=background:Normal lines=999 columns=90 spell
+  else
+    setlocal fuopt=background:Normal lines=999 columns=90 fullscreen spell nonumber
+  endif
   au BufUnload <buffer> call WriterClose()
 endfunction
 
@@ -57,22 +61,9 @@ fu! WriterClose()
   so $MYGVIMRC
 endfu
 
-map <leader>wr :call WriterInit()<CR>
+map <leader>wr :call WriterInit('on')<CR>
+map <leader>wR :call WriterInit('off')<CR>
 map <leader>wj :call WriterJournal('on')<CR>
 map <leader>wJ :call WriterJournal('off')<CR>
 map <leader>wq :call WriterSwitch()<CR>
 map <leader>wc :call WriterClose()<CR>
-
-"Inline controls for text styling
-
-"Bold
-"Make sure to disable the D-b combo in your gvimrc with:
-"macmenu &Tools.Make key=<nop>
-map <D-b> i****<esc>hi
-imap <D-b> ****<esc>hi
-vmap <D-b> S*<esc>v_gvS*
-
-"Italic
-map <D-i> i**<esc>i
-imap <D-i> **<esc>i
-vmap <D-i> S*
