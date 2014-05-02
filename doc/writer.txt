@@ -1,6 +1,6 @@
 *writer.txt*  Distaction free writing environment for Vim            *writer*
 
-A minimal colorscheme with both a light and dark version with a few small
+A minimal colorscheme with a light and dark version and a few small
 functions that make it easy to isolate your writing.
 
 ==============================================================================

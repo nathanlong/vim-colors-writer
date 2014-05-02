@@ -28,7 +28,7 @@ There is a branch for Powerline users, but I have discontinued updating it.
 
     git submodule add git@github.com:nathanlong/vim-colors-writer.git ~/.vim/bundle/colors-writer
 
-## Commands
+## Default Commands
 
 `<leader>wr` - Loads writer into your current buffer and isolates text.
 
@@ -43,6 +43,8 @@ not launch writer.
 `<leader>wq` - Switches between dark and light themes while in fullscreen mode
 
 `<leader>wc` - Closes writer and reapplies your defaults
+
+These can all be remapped to suit your needs.
 
 ## Customization
 
@@ -62,7 +64,5 @@ And to choose which theme to load on default:
 
 **TODOS:**
 
-- Allow custom writer function bindings.
-- Add more support for more filetypes.
-- Add more themes...?
+- Change Writer function to toggle so it can be invoked and closed with the same commands.
 
