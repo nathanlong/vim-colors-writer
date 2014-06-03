@@ -30,7 +30,7 @@ There is a branch for Powerline users, but I have discontinued updating it.
 
 ## Default Commands
 
-`<leader>wr` - Loads writer into your current buffer and isolates text.
+`<leader>wr` - Toggles writer on and off in fullscreen mode.
 
 `<leader>wR` - Loads writer into your current buffer with no fullscreen
 
