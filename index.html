@@ -27,14 +27,14 @@
 
         <header>
           <h1>Writer</h1>
-          <h2>Distraction-free writing environment for Vim, with markdown and journal support.</h2>
+          <h2>Distraction-free writing environment for Vim, <br />with light and dark themes.</h2>
         </header>
 
         <section id="downloads" class="clearfix">
+          <span class="toggle-theme">Toggle Light / Dark</span>
           <a href="https://github.com/nathanlong/vim-colors-writer/zipball/master" id="download-zip" class="download" ><span>Download .zip</span></a>
           <a href="https://github.com/nathanlong/vim-colors-writer/tarball/master" id="download-tar-gz" class="download"><span>Download .tar.gz</span></a>
           <a href="https://github.com/nathanlong/vim-colors-writer" id="view-on-github" class="download"><span>View on GitHub</span></a>
-          <span class="toggle-theme">Toggle Theme</span>
         </section>
 
         <section id="main_content">
@@ -68,23 +68,32 @@
 ~/.vim/bundle/colors-writer
 </code></pre>
 
+<p>Or if you use Vundle, simply add the following to your .vimrc plugin secion:</p>
+
+<pre><code>Plugin nathanlong/vim-colors-writer</code></pre>
+
             <p>Or you can just download it and pop it into your <code>.vim/colors/</code> and
               <code>.vim/plugins</code> directories.</p>
 
             <h2>Commands</h2>
 
-            <p><code>&lt;leader&gt;wr</code> - Loads writer into your current buffer</p>
+            <p><code>&lt;leader&gt;wr</code> - Toggles writer on and off in fullscreen mode.</p>
+            <p><code>&lt;leader&gt;we</code> - Loads writer and isolates text in fullscreen.</p>
+            <p><code>&lt;leader&gt;wE</code> - Loads writer into your current buffer, no fullscreen.</p>
 
             <p><code>&lt;leader&gt;wj</code> - Creates a new dated journal file (format: YYMMDD.md) inside
               your specified journal directory.</p>
+
+            <p><code>&lt;leader&gt;wJ</code> - Creates a new dated journal file (format: YYMMDD.md) inside
+              your specified journal directory, but does not launch writer defaults.</p>
 
             <p><code>&lt;leader&gt;wq</code> - Switches between dark and light themes while in fullscreen mode</p>
 
             <p><code>&lt;leader&gt;wc</code> - Closes writer and reapplies your defaults</p>
 
-            <h2>Customization</h2>
+            <p>All of these commands can be remapped. Refer to the plugin help documentation.</p>
 
-            <p>I've also included a few options for customization:</p>
+            <h2>Customization</h2>
 
             <p>To customize your 'journal' directory, add this to your vimrc:</p>
 
