@@ -6,26 +6,34 @@ functions that make it easy to isolate your writing.
 ==============================================================================
  1.- COMMANDS                                               *writer-commands*
 
-                                                *<leader>wr*
-<leader>wr              Loads writer and isolates text in fullscreen.
+                                                *:WriterToggle*
+<leader>wr              Toggles writer on and off in fullscreen mode
 
-                                                *<leader>wR*
-<leader>wR              Loads writer into your current buffer, no fullscreen.
+                                                *:WriterInit*
+<leader>we              Loads writer and isolates text in fullscreen.
 
-                                                *<leader>wj*
+                                                *:WriterInitQuiet*
+<leader>wE              Loads writer into your current buffer, no fullscreen.
+
+                                                *:WriterJournal*
 <leader>wj              Creates a new dated journal file (format: YYMMDD.md)
                         inside your specified journal directory.
 
-                                                *<leader>wJ*
+                                                *:WriterJournalOff*
 <leader>wJ              Creates a new dated journal file (format: YYMMDD.md)
                         but does not launch writer.
 
-                                                *<leader>wq*
+                                                *:WriterSwitchThemes*
 <leader>wq              Switches between dark and light themes while in
                         fullscreen mode
 
-                                                *<leader>wc*
+                                                *:WriterClose*
 <leader>wc              Closees writer and reapplies your defaults.
+
+
+All commands can be remapped like:
+
+    map <c-r> :WriterToggle<CR>                                              ~
 
 ==============================================================================
  2.- CUSTOMIZATION                                         *writer-customize*

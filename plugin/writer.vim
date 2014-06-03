@@ -17,6 +17,9 @@ endif
 
 let s:writer_theme = g:writer_theme
 
+"Tracks state, open or closed
+let g:writer_state = 0
+
 "Sets up Writer environment, check for fullscreen ask
 fu! s:WriterInit(arg)
   let &background = s:writer_theme
@@ -27,6 +30,7 @@ fu! s:WriterInit(arg)
     setlocal fuopt=background:Normal lines=999 columns=90 fullscreen spell nonumber
   endif
   au BufUnload <buffer> call <sid>WriterClose()
+  let g:writer_state = 1
 endfunction
 
 "Opens a journal file in specified directory
@@ -57,27 +61,37 @@ endfu
 "Exit fullscreen and source defaults
 fu! s:WriterClose()
   setlocal nofullscreen
+  let g:writer_state = 0
   so $MYVIMRC
   so $MYGVIMRC
 endfu
 
-command! WriterInitOn :call <sid>WriterInit('on')
-command! WriterInitOff :call <sid>WriterInit('off')
-command! WriterJournalOn :call <sid>WriterJournal('on')
+fu! s:WriterToggle()
+  if g:writer_state == 0
+    call <sid>WriterInit('on')
+  else
+    call <sid>WriterClose()
+  endif
+endfu
+
+command! WriterInit :call <sid>WriterInit('on')
+command! WriterInitQuiet :call <sid>WriterInit('off')
+command! WriterJournal :call <sid>WriterJournal('on')
 command! WriterJournalOff :call <sid>WriterJournal('off')
 command! WriterSwitchThemes :call <sid>WriterSwitch()
 command! WriterExit :call <sid>WriterClose()
+command! WriterToggle :call <sid>WriterToggle()
 
 if !hasmapto(':WriterInitOn<CR>')
-  map <leader>wr :WriterInitOn<CR>
+  map <leader>we :WriterInit<CR>
 endif
 
 if !hasmapto(':WriterInitOff<CR>')
-  map <leader>wR :WriterInitOff<CR>
+  map <leader>wE :WriterInitQuiet<CR>
 endif
 
 if !hasmapto(':WriterJournalOn<CR>')
-  map <leader>wj :WriterJournalOn<CR>
+  map <leader>wj :WriterJournal<CR>
 endif
 
 if !hasmapto(':WriterJournalOff<CR>')
@@ -90,4 +104,8 @@ endif
 
 if !hasmapto(':WriterExit<CR>')
   map <leader>wc :WriterExit<CR>
+endif
+
+if !hasmapto(':WriterToggle<CR>')
+  map <leader>wr :WriterToggle<CR>
 endif
