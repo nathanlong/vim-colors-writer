@@ -25,9 +25,9 @@ fu! s:WriterInit(arg)
   let &background = s:writer_theme
   colorscheme writer
   if a:arg == 'off'
-    setlocal fuopt=background:Normal lines=999 columns=90 spell
+    setlocal fuopt=background:Normal lines=999 columns=95 spell showbreak=
   else
-    setlocal fuopt=background:Normal lines=999 columns=90 fullscreen spell nonumber
+    setlocal fuopt=background:Normal lines=999 columns=95 fullscreen spell showbreak=
   endif
   au BufUnload <buffer> call <sid>WriterClose()
   let g:writer_state = 1

@@ -33,7 +33,7 @@ let colors_name = "writer"
 
 " Color variables
 " ---------------------------------------------------------------------
-let s:base1            = "#000000"
+let s:base1            = "#111111"
 let s:base2            = "#091f0f"
 let s:text             = "#216e35"
 let s:textlo           = "#13401f"
@@ -42,7 +42,7 @@ let s:altlo            = "#00503c"
 let s:althi            = "#007a5a"
 let s:accentlo         = "#235257"
 let s:accenthi         = "#307278"
-let s:nearinv          = "#001200"
+let s:nearinv          = "#111811"
 
 " Formatting options and null values for passthrough effect 
 " ---------------------------------------------------------------------
@@ -62,7 +62,7 @@ let s:vmode           = "gui"
 " Light Scheme 
 " ---------------------------------------------------------------------
 if &background == "light"
-  let s:base1         = "#f0f2f1"
+  let s:base1         = "#ebebeb"
   let s:base2         = "#d4d5d9"
   let s:text          = "#555555"
   let s:textlo        = "#a6a6a6"
@@ -71,7 +71,7 @@ if &background == "light"
   let s:althi         = "#00aeff"
   let s:accentlo      = "#e8c24c"
   let s:accenthi      = "#ab8f38"
-  let s:nearinv       = "#ebebeb"
+  let s:nearinv       = "#e0e0e0"
   if (s:back != "NONE")
     let s:back        = s:base1
   endif
@@ -146,8 +146,8 @@ exe "hi! IncSearch"       .s:fmt_stnd   .s:fg_accenthi  .s:bg_none
 exe "hi! Search"          .s:fmt_revr   .s:fg_accenthi  .s:bg_none
 exe "hi! MoreMsg"         .s:fmt_none   .s:fg_accenthi  .s:bg_none
 exe "hi! ModeMsg"         .s:fmt_none   .s:fg_textlo    .s:bg_none
-exe "hi! LineNr"          .s:fmt_none   .s:fg_textlo   .s:bg_nearinv
-exe "hi! CursorLineNr"    .s:fmt_none   .s:fg_textlo   .s:bg_nearinv
+exe "hi! LineNr"          .s:fmt_none   .s:fg_nearinv    .s:bg_base1
+exe "hi! CursorLineNr"    .s:fmt_none   .s:fg_nearinv    .s:bg_base1
 exe "hi! Question"        .s:fmt_bold   .s:fg_accentlo  .s:bg_none
 exe "hi! VertSplit"       .s:fmt_none   .s:fg_base2     .s:bg_base2
 exe "hi! Title"           .s:fmt_bold   .s:fg_accenthi  .s:bg_none
