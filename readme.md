@@ -44,6 +44,8 @@ not launch writer.
 
 `<leader>wc` - Closes writer and reapplies your defaults
 
+`<leader>wp` - Toggle between hard and soft text wrapping.
+
 These can all be remapped to suit your needs.
 
 ## Customization

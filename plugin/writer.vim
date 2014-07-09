@@ -66,11 +66,26 @@ fu! s:WriterClose()
   so $MYGVIMRC
 endfu
 
+
+" Toggle Writer on and off
 fu! s:WriterToggle()
   if g:writer_state == 0
     call <sid>WriterInit('on')
   else
     call <sid>WriterClose()
+  endif
+endfu
+
+" Toggle between hard breaks at 80 characters and wrapped lines 
+fu! s:WriterTextWrap()
+  if &formatoptions =~# 't'
+    setlocal formatoptions-=t
+    setlocal textwidth=0
+    echo "Hard wrap turned off."
+  else
+    setlocal formatoptions+=t
+    setlocal textwidth=80
+    echo "Hard wrap turned on."
   endif
 endfu
 
@@ -81,6 +96,7 @@ command! WriterJournalOff :call <sid>WriterJournal('off')
 command! WriterSwitchThemes :call <sid>WriterSwitch()
 command! WriterExit :call <sid>WriterClose()
 command! WriterToggle :call <sid>WriterToggle()
+command! WriterWrap :call <sid>WriterTextWrap()
 
 if !hasmapto(':WriterInitOn<CR>')
   map <leader>we :WriterInit<CR>
@@ -108,4 +124,8 @@ endif
 
 if !hasmapto(':WriterToggle<CR>')
   map <leader>wr :WriterToggle<CR>
+endif
+
+if !hasmapto(':WriterWrap<CR>')
+  map <leader>wp :WriterWrap<CR>
 endif
