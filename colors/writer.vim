@@ -31,17 +31,17 @@ let colors_name = "writer"
 " accenthi = high contrast accent
 " nearinv  = nearly invisible (but not quite)
 
-" Color variables
+" Dark Theme Color variables
 " ---------------------------------------------------------------------
 let s:base1            = "#111111"
 let s:base2            = "#091f0f"
-let s:text             = "#216e35"
-let s:textlo           = "#13401f"
-let s:texthi           = "#428f55"
-let s:altlo            = "#00503c"
-let s:althi            = "#007a5a"
-let s:accentlo         = "#235257"
-let s:accenthi         = "#307278"
+let s:text             = "#1f6a23"
+let s:textlo           = "#103812"
+let s:texthi           = "#32a838"
+let s:altlo            = "#886818"
+let s:althi            = "#c89c1f"
+let s:accentlo         = "#504836"
+let s:accenthi         = "#c8b994"
 let s:nearinv          = "#111811"
 
 " Formatting options and null values for passthrough effect 
@@ -59,7 +59,7 @@ let s:i               = ",italic"
 let s:back            = s:base1
 let s:vmode           = "gui"
 
-" Light Scheme 
+" Light Theme Color Values 
 " ---------------------------------------------------------------------
 if &background == "light"
   let s:base1         = "#ebebeb"
