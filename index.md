@@ -24,7 +24,7 @@ Plugin 'nathanlong/vim-colors-writer'
 
 ### Pathogen:
 ```bash
-git clone git@github.com:nathanlong/vim-colors-writer.git ~/.vim/bundle/colors-writer
+git clone https://github.com/nathanlong/vim-colors-writer.git ~/.vim/bundle/colors-writer
 ```
 
 ### Manual:

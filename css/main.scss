@@ -42,6 +42,10 @@ body {
   transition:         background-color 0.25s ease-in-out, color 0.4s ease-in-out;
 }
 
+pre {
+  padding: 1em;
+}
+
 // Light theme
 
 .base1{    background-color: #ebebeb;}
@@ -86,6 +90,17 @@ header h2 {
 
 .color-table div {
   color: #000;
+}
+
+pre {
+  color: $light-text;
+  background-color: $light-nearinv;
+}
+
+hr {
+  border: 0;
+  border-bottom: solid 1px $light-base2;
+  margin: 1em 0;
 }
 
 // Dark Theme
@@ -139,6 +154,15 @@ body.dark {
   .color-table div {
     color: #fff;
   }
+
+  pre {
+    color: $dark-text;
+    background-color: $dark-base2;
+  }
+
+  hr {
+    border-color: $dark-base2;
+  }
 }
 
 // Layout ----------------------------------------
@@ -183,9 +207,11 @@ header h2 {
 
 code, pre {
   font-family: "Source Code Pro", monospace;
-  color: $light-text;
-  background-color: $light-nearinv;
   margin-bottom: 30px;
+}
+
+pre {
+  padding: 1em;
 }
 
 th {
@@ -211,7 +237,15 @@ td {
   }
 }
 
-@import "pygments";
+footer {
+  margin-bottom: 3em;
+  text-align: center;
+  margin-top: 2em;
+}
+
+
+
+// @import "pygments";
 
 .clearfix:before,
 .clearfix:after {
