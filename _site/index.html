@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Writer for Vim</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/css/main.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.toggle-theme').click(function(){
+       $('body').toggleClass('dark'); 
+     });
+    });
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="inner">
+
+      <header>
+        <h1>Writer for Vim</h1>
+        <h2>Distraction-free writing environment for MacVim, <br />with light and dark themes.</h2>
+      </header>
+
+      <section id="downloads" class="clearfix">
+        <span class="toggle-theme button">Toggle Dark/Light</span>
+<!--         <a href="https://github.com/nathanlong/vim-colors-writer/zipball/master" id="download-zip" class="download" ><span>Download .zip</span></a>
+        <a href="https://github.com/nathanlong/vim-colors-writer/tarball/master" id="download-tar-gz" class="download"><span>Download .tar.gz</span></a>
+        <a href="https://github.com/nathanlong/vim-colors-writer" id="view-on-github" class="download"><span>View on GitHub</span></a> -->
+      </section>
+
+      <section id="colors" class="color-table clearfix">
+
+        <h2>Colors</h2>
+        <div class="base1">base1</div>
+        <div class="base2">base2</div>
+        <div class="text">text</div>
+        <div class="textlo">textlo</div>
+        <div class="texthi">texthi</div>
+        <div class="altlo">altlo</div>
+        <div class="althi">althi</div>
+        <div class="accentlo">accentlo</div>
+        <div class="accenthi">accenthi</div>
+        <div class="nearinv">nearinv</div>
+      </section>
+
+    <h2 id="description">Description</h2>
+
+<p>This is a minimal distraction-free theme for writing in Vim. There are many like it, but this one is mine.</p>
+
+<p>There&#39;s a light mode that&#39;s reminicent of <a href="http://www.iawriter.com/">IAWriter</a> for use in bright environments and a dark theme similiar to <a href="http://www.hogbaysoftware.com/products/writeroom">WriteRoom</a> for dark environments.</p>
+
+<p>I built this specifically for use in MacVim and it works best with <a href="https://github.com/tpope/vim-markdown">Tim Pope&#39;s Markdown Syntax</a> or <a href="https://github.com/nathanlong/vim-markdown">my fork of it</a>.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>The best way to install is with a plugin manager like <a href="https://github.com/gmarik/Vundle.vim">Vundle</a> or <a href="https://github.com/tpope/vim-pathogen">Pathogen</a>.</p>
+
+<h3 id="vundle:">Vundle:</h3>
+<div class="highlight"><pre><code class="language-vim" data-lang="vim"><span class="c">&quot; Add to .vimrc</span>
+Plugin <span class="s1">&#39;nathanlong/vim-colors-writer&#39;</span>
+</code></pre></div>
+<h3 id="pathogen:">Pathogen:</h3>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">git clone git@github.com:nathanlong/vim-colors-writer.git ~/.vim/bundle/colors-writer
+</code></pre></div>
+<h3 id="manual:">Manual:</h3>
+
+<p>I&#39;d really suggest using a plugin manager, but if you roll your Vim manually clone the repo and split the files into their respetive directories (colors/writer.vim -&gt; .vim/colors/writer.vim and so on).</p>
+
+<h2 id="default-commands">Default Commands</h2>
+
+<p>I&#39;ve built some simple commands into the plugin, all of these can be remapped:</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Map</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><code>&lt;leader&gt;wr</code></td>
+<td style="text-align: left">Toggles writer on and off in fullscreen mode.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>&lt;leader&gt;wR</code></td>
+<td style="text-align: left">Loads writer into your current buffer with no fullscreen</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>&lt;leader&gt;wj</code></td>
+<td style="text-align: left">Creates a new dated journal file (format: YYMMDD.md) in your specified journal directory.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>&lt;leader&gt;wJ</code></td>
+<td style="text-align: left">Creates a new dated journal file (format: YYMMDD.md) but does not launch writer.</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>&lt;leader&gt;wq</code></td>
+<td style="text-align: left">Switches between dark and light themes while in fullscreen mode</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>&lt;leader&gt;wc</code></td>
+<td style="text-align: left">Closes writer and reapplies your defaults</td>
+</tr>
+<tr>
+<td style="text-align: left"><code>&lt;leader&gt;wp</code></td>
+<td style="text-align: left">Toggle between hard and soft text wrapping.</td>
+</tr>
+</tbody></table>
+
+<p>There are some other customization options, you can read about them in the plugin documentation.</p>
+
+
+
+    </div>
+  </div>
+</body>
+</html>
