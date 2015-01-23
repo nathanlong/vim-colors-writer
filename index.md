@@ -37,12 +37,12 @@ I've built some simple commands into the plugin, all of these can be remapped:
 
 | Map | Description |
 |:--- |:----------- |
-| `<leader>wr` | Toggles writer on and off in fullscreen mode. |
-| `<leader>wR` | Loads writer into your current buffer with no fullscreen |
-| `<leader>wj` | Creates a new dated journal file (format: YYMMDD.md) in your specified journal directory. |
-| `<leader>wJ` | Creates a new dated journal file (format: YYMMDD.md) but does not launch writer. |
-| `<leader>wq` | Switches between dark and light themes while in fullscreen mode |
-| `<leader>wc` | Closes writer and reapplies your defaults |
-| `<leader>wp` | Toggle between hard and soft text wrapping. |
+| **`<leader>wr`** | Toggles writer on and off in fullscreen mode. |
+| **`<leader>wR`** | Loads writer into your current buffer with no fullscreen |
+| **`<leader>wj`** | Creates a new dated journal file (format: YYMMDD.md) in your specified journal directory. |
+| **`<leader>wJ`** | Creates a new dated journal file (format: YYMMDD.md) but does not launch writer. |
+| **`<leader>wq`** | Switches between dark and light themes while in fullscreen mode |
+| **`<leader>wc`** | Closes writer and reapplies your defaults |
+| **`<leader>wp`** | Toggle between hard and soft text wrapping. |
 
 There are some other customization options, you can read about them in the plugin documentation.

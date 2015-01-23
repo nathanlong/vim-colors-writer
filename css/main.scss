@@ -7,13 +7,13 @@
 
 $dark-base1: #111111;
 $dark-base2: #091f0f;
-$dark-text:  #216e35;
-$dark-textlo: #13401f;
-$dark-texthi: #428f55;
-$dark-altlo: #00503c;
-$dark-althi: #007a5a;
-$dark-accentlo: #235257;
-$dark-accenthi: #307278;
+$dark-text:  #206B24;
+$dark-textlo: #113813;
+$dark-texthi: #32A839;
+$dark-altlo: #896919;
+$dark-althi: #C99D20;
+$dark-accentlo: #514937;
+$dark-accenthi: #C9BA95;
 $dark-nearinv: #111811;
 
 $light-base1:    #ebebeb;
@@ -35,29 +35,45 @@ body {
   background: $light-base1;
   font-family: 'Source Code Pro', monospace;
   color: $light-text;
-  -webkit-transition: background-color 0.25s ease-in-out, color 0.4s ease-in-out;
-  -moz-transition:    background-color 0.25s ease-in-out, color 0.4s ease-in-out;
-  -ms-transition:     background-color 0.25s ease-in-out, color 0.4s ease-in-out;
-  -o-transition:      background-color 0.25s ease-in-out, color 0.4s ease-in-out;
-  transition:         background-color 0.25s ease-in-out, color 0.4s ease-in-out;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -moz-transition:    background-color 0.25s ease-in-out;
+  -ms-transition:     background-color 0.25s ease-in-out;
+  -o-transition:      background-color 0.25s ease-in-out;
+  transition:         background-color 0.25s ease-in-out;
+}
+
+h1, h2, h3, p, a, td, code {
+  -webkit-transition: color 0.5s ease-in-out;
+  -moz-transition:    color 0.5s ease-in-out;
+  -ms-transition:     color 0.5s ease-in-out;
+  -o-transition:      color 0.5s ease-in-out;
+  transition:         color 0.5s ease-in-out;  
 }
 
 pre {
   padding: 1em;
 }
 
+.color-chip {
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition:    background-color 0.5s ease-in-out;
+  -ms-transition:     background-color 0.5s ease-in-out;
+  -o-transition:      background-color 0.5s ease-in-out;
+  transition:         background-color 0.5s ease-in-out;
+}
+
 // Light theme
 
-.base1{    background-color: #ebebeb;}
-.base2{    background-color: #d4d5d9;}
-.text{     background-color: #555555;}
-.textlo{   background-color: #a6a6a6;}
-.texthi{   background-color: #2b2b2b;}
-.altlo{    background-color: #80d7ff;}
-.althi{    background-color: #00aeff;}
-.accentlo{ background-color: #e8c24c;}
-.accenthi{ background-color: #ab8f38;}
-.nearinv{  background-color: #e0e0e0;}
+.base1{    background-color: $light-base1;}
+.base2{    background-color: $light-base2;}
+.text{     background-color: $light-text;}
+.textlo{   background-color: $light-textlo;}
+.texthi{   background-color: $light-texthi;}
+.altlo{    background-color: $light-altlo;}
+.althi{    background-color: $light-althi;}
+.accentlo{ background-color: $light-accentlo;}
+.accenthi{ background-color: $light-accenthi;}
+.nearinv{  background-color: $light-nearinv;}
 
 a {
   color: $light-althi;
@@ -112,16 +128,16 @@ body.dark {
 
 .dark {
 
-  .base1 { background-color: #111111;}
-  .base2 { background-color: #091f0f;}
-  .text { background-color: #216e35;}
-  .textlo { background-color: #13401f;}
-  .texthi { background-color: #428f55;}
-  .altlo { background-color: #00503c;}
-  .althi { background-color: #007a5a;}
-  .accentlo { background-color: #235257;}
-  .accenthi { background-color: #307278;}
-  .nearinv { background-color: #111811;}
+  .base1{    background-color: $dark-base1;}
+  .base2{    background-color: $dark-base2;}
+  .text{     background-color: $dark-text;}
+  .textlo{   background-color: $dark-textlo;}
+  .texthi{   background-color: $dark-texthi;}
+  .altlo{    background-color: $dark-altlo;}
+  .althi{    background-color: $dark-althi;}
+  .accentlo{ background-color: $dark-accentlo;}
+  .accenthi{ background-color: $dark-accenthi;}
+  .nearinv{  background-color: $dark-nearinv;}
 
   a {
     color: $dark-althi;

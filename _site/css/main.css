@@ -360,14 +360,28 @@ body {
   background: #ebebeb;
   font-family: 'Source Code Pro', monospace;
   color: #555555;
-  -webkit-transition: background-color 0.25s ease-in-out, color 0.4s ease-in-out;
-  -moz-transition: background-color 0.25s ease-in-out, color 0.4s ease-in-out;
-  -ms-transition: background-color 0.25s ease-in-out, color 0.4s ease-in-out;
-  -o-transition: background-color 0.25s ease-in-out, color 0.4s ease-in-out;
-  transition: background-color 0.25s ease-in-out, color 0.4s ease-in-out; }
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -moz-transition: background-color 0.25s ease-in-out;
+  -ms-transition: background-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out; }
+
+h1, h2, h3, p, a, td, code {
+  -webkit-transition: color 0.5s ease-in-out;
+  -moz-transition: color 0.5s ease-in-out;
+  -ms-transition: color 0.5s ease-in-out;
+  -o-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out; }
 
 pre {
   padding: 1em; }
+
+.color-chip {
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -ms-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out; }
 
 .base1 {
   background-color: #ebebeb; }
@@ -434,49 +448,49 @@ hr {
 
 body.dark {
   background: #111111;
-  color: #216e35; }
+  color: #206B24; }
 
 .dark .base1 {
   background-color: #111111; }
 .dark .base2 {
   background-color: #091f0f; }
 .dark .text {
-  background-color: #216e35; }
+  background-color: #206B24; }
 .dark .textlo {
-  background-color: #13401f; }
+  background-color: #113813; }
 .dark .texthi {
-  background-color: #428f55; }
+  background-color: #32A839; }
 .dark .altlo {
-  background-color: #00503c; }
+  background-color: #896919; }
 .dark .althi {
-  background-color: #007a5a; }
+  background-color: #C99D20; }
 .dark .accentlo {
-  background-color: #235257; }
+  background-color: #514937; }
 .dark .accenthi {
-  background-color: #307278; }
+  background-color: #C9BA95; }
 .dark .nearinv {
   background-color: #111811; }
 .dark a {
-  color: #007a5a; }
+  color: #C99D20; }
   .dark a:hover {
-    color: #307278; }
+    color: #C9BA95; }
 .dark h1, .dark h2, .dark th {
-  color: #428f55; }
+  color: #32A839; }
 .dark header h2 {
-  color: #13401f; }
+  color: #113813; }
 .dark .button {
   cursor: pointer;
-  background: #007a5a;
+  background: #C99D20;
   padding: 6px;
   display: block;
   color: #111111;
   margin-bottom: 1.5em; }
   .dark .button:hover {
-    background: #307278; }
+    background: #C9BA95; }
 .dark .color-table div {
   color: #fff; }
 .dark pre {
-  color: #216e35;
+  color: #206B24;
   background-color: #091f0f; }
 .dark hr {
   border-color: #091f0f; }
