@@ -45,4 +45,18 @@ I've built some simple commands into the plugin, all of these can be remapped:
 | **`<leader>wc`** | Closes writer and reapplies your defaults |
 | **`<leader>wp`** | Toggle between hard and soft text wrapping. |
 
-There are some other customization options, you can read about them in the plugin documentation.
+## Customization
+
+There are three options you can place in your `.vimrc` to control default behavior:
+
+| Setting | Description | Default |
+|:--------|:------------|:--------|
+| `g:writer_journal_dir` | Controls where the journal function saves files. Accepts a path. | `$HOME` |
+| `g:writer_theme`       | Choose which theme to load by default. Accepts 'light' or 'dark' | 'light' |
+| `g:writer_wrap`        | Picks hard wrap (forces line breaks) or soft wrap (no breaks) | 'hard' |
+
+Example usage:
+
+```vim
+let g:writer_theme = 'dark'
+```
