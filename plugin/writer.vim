@@ -36,9 +36,9 @@ fu! s:WriterInit(arg)
 
   "Wrapping and format options
   if g:writer_wrap == 'hard'
-    setlocal formatoptions=t textwidth=80
+    setlocal formatoptions=tanro textwidth=80
   elseif g:writer_wrap == 'soft'
-    setlocal formatoptions=l textwidth=0
+    setlocal formatoptions=lanro textwidth=0
   endif
 
   "Check if the user has par for formatting paragraphs
@@ -101,11 +101,11 @@ endfu
 " Toggle between hard breaks at 80 characters and wrapped lines 
 fu! s:WriterTextWrap()
   if &formatoptions =~# 't'
-    setlocal formatoptions=l
+    setlocal formatoptions=lanro
     setlocal textwidth=0
     echo "Hard wrap turned off."
   else
-    setlocal formatoptions=t
+    setlocal formatoptions=tanro
     setlocal textwidth=80
     echo "Hard wrap turned on."
   endif
