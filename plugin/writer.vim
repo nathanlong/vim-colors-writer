@@ -1,6 +1,6 @@
 " Writer.vim - Distraction free writing environment for Vim. Huzzah!
-" Maintainer:   Nathan Long (www.nathan-long.com)
-" Version:      0.41
+" Maintainer:   Nathan Long (nathan-long.com)
+" Version:      0.5
 
 "Plugin Variables
 if !exists('g:writer_journal_dir')
@@ -15,20 +15,42 @@ else
   let g:writer_theme = expand(g:writer_theme)
 endif
 
+if !exists('g:writer_wrap')
+  let g:writer_wrap = 'hard'
+else
+  let g:writer_wrap = expand(g:writer_wrap)
+endif
+
 let s:writer_theme = g:writer_theme
 
 "Tracks state, open or closed
 let g:writer_state = 0
 
-"Sets up Writer environment, check for fullscreen ask
+"Set up Writer environment
 fu! s:WriterInit(arg)
   let &background = s:writer_theme
+
+  "Basic settings
   colorscheme writer
-  if a:arg == 'off'
-    setlocal fuopt=background:Normal lines=999 columns=95 spell showbreak=
-  else
-    setlocal fuopt=background:Normal lines=999 columns=95 fullscreen spell showbreak=
+  setlocal fuopt=background:Normal lines=999 columns=95 fullscreen wrap linebreak spell showbreak=
+
+  "Wrapping and format options
+  if g:writer_wrap == 'hard'
+    setlocal formatoptions=t textwidth=80
+  elseif g:writer_wrap == 'soft'
+    setlocal formatoptions=l textwidth=0
   endif
+
+  "Check if the user has par for formatting paragraphs
+  if executable('par') == 1
+    setlocal formatprg=par
+  endif
+
+  "Full writer settings
+  if a:arg == 'on'
+    setlocal fullscreen
+  endif
+
   au BufUnload <buffer> call <sid>WriterClose()
   let g:writer_state = 1
 endfunction
@@ -79,11 +101,11 @@ endfu
 " Toggle between hard breaks at 80 characters and wrapped lines 
 fu! s:WriterTextWrap()
   if &formatoptions =~# 't'
-    setlocal formatoptions-=t
+    setlocal formatoptions=l
     setlocal textwidth=0
     echo "Hard wrap turned off."
   else
-    setlocal formatoptions+=t
+    setlocal formatoptions=t
     setlocal textwidth=80
     echo "Hard wrap turned on."
   endif

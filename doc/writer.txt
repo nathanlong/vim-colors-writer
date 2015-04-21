@@ -28,15 +28,16 @@ functions that make it easy to isolate your writing.
                         fullscreen mode.
 
                                                 *:WriterClose*
-<leader>wc              Closees writer and reapplies your defaults.
+<leader>wc              Closes writer and reapplies your defaults.
 
                                                 *:WriterWrap*
-<leader>wp              Toggles hard wraps at 80 characters and soft wraps.
+<leader>wp              Toggles between hard wrap at 80 characters and soft 
+                        wrap.
 
 
 All commands can be remapped like:
 
-    map <c-r> :WriterToggle<CR>                                              ~
+    map <c-R> :WriterToggle<CR>                                              ~
 
 ==============================================================================
  2.- CUSTOMIZATION                                         *writer-customize*
@@ -45,9 +46,14 @@ To customize your 'journal' directory, add this to your vimrc:
 
     let g:writer_journal_dir = 'path/to/journal/'                            ~
 
-And to choose which theme to load on default:
+And to choose which theme to load on default, accepts 'light' (default), or
+'dark':
 
-    let g:writer_theme = dark                                               ~
+    let g:writer_theme = 'dark'                                               ~
+
+To choose default wrapping mode, accepts 'hard' (default) or 'soft':
+
+    let g:writer_wrap = 'soft'                                                ~
 
 
 vim:tw=78:et:ft=help:norl:
