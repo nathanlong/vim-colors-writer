@@ -1,6 +1,6 @@
 " Writer.vim - Distraction free writing environment for Vim. Huzzah!
 " Maintainer:   Nathan Long (nathan-long.com)
-" Version:      0.5
+" Version:      0.6
 
 "Plugin Variables
 if !exists('g:writer_journal_dir')
@@ -32,18 +32,27 @@ fu! s:WriterInit(arg)
 
   "Basic settings
   colorscheme writer
-  setlocal fuopt=background:Normal lines=999 columns=95 fullscreen wrap linebreak spell showbreak=
+  setlocal fuopt=background:Normal lines=999 columns=95 wrap linebreak noexpandtab spell showbreak=""
+  setlocal spelllang=en_us
+  setlocal complete+=kspell
+  nnoremap j gj
+  nnoremap k gk
+
+  "Font settings (if set)
+  if exists('g:writer_font')
+    exe ':setlocal guifont=' . expand(g:writer_font)
+  endif
 
   "Wrapping and format options
   if g:writer_wrap == 'hard'
-    setlocal formatoptions=tanro textwidth=80
+    setlocal formatoptions=t textwidth=80
   elseif g:writer_wrap == 'soft'
-    setlocal formatoptions=lanro textwidth=0
+    setlocal formatoptions=l textwidth=0
   endif
 
   "Check if the user has par for formatting paragraphs
   if executable('par') == 1
-    setlocal formatprg=par
+    setlocal formatprg=par\ -w80
   endif
 
   "Full writer settings
@@ -101,11 +110,11 @@ endfu
 " Toggle between hard breaks at 80 characters and wrapped lines 
 fu! s:WriterTextWrap()
   if &formatoptions =~# 't'
-    setlocal formatoptions=lanro
+    setlocal formatoptions=l
     setlocal textwidth=0
     echo "Hard wrap turned off."
   else
-    setlocal formatoptions=tanro
+    setlocal formatoptions=t
     setlocal textwidth=80
     echo "Hard wrap turned on."
   endif
@@ -151,3 +160,5 @@ endif
 if !hasmapto(':WriterWrap<CR>')
   map <leader>wp :WriterWrap<CR>
 endif
+
+

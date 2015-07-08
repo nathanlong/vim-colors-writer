@@ -44,7 +44,7 @@ All commands can be remapped like:
 
 To customize your 'journal' directory, add this to your vimrc:
 
-    let g:writer_journal_dir = 'path/to/journal/'                            ~
+    let g:writer_journal_dir = '~/path/to/journal/'                            ~
 
 And to choose which theme to load on default, accepts 'light' (default), or
 'dark':
@@ -54,6 +54,10 @@ And to choose which theme to load on default, accepts 'light' (default), or
 To choose default wrapping mode, accepts 'hard' (default) or 'soft':
 
     let g:writer_wrap = 'soft'                                                ~
+
+To choose which font to use as default, use the same format as `set guifont`:
+
+    let g:writer_font = "Consolas:h18"                                        ~
 
 
 vim:tw=78:et:ft=help:norl:
