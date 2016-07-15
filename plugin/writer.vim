@@ -32,7 +32,7 @@ fu! s:WriterInit(arg)
 
   "Basic settings
   colorscheme writer
-  setlocal fuopt=background:Normal lines=999 columns=95 wrap linebreak noexpandtab spell showbreak=""
+  setlocal fuopt=background:Normal lines=999 columns=95 wrap linespace=5 linebreak noexpandtab spell showbreak=""
   setlocal spelllang=en_us
   setlocal complete+=kspell
   nnoremap j gj
@@ -40,7 +40,7 @@ fu! s:WriterInit(arg)
 
   "Font settings (if set)
   if exists('g:writer_font')
-    exe ':setlocal guifont=' . expand(g:writer_font)
+    exe 'setlocal guifont=' . g:writer_font
   endif
 
   "Wrapping and format options
@@ -160,5 +160,3 @@ endif
 if !hasmapto(':WriterWrap<CR>')
   map <leader>wp :WriterWrap<CR>
 endif
-
-

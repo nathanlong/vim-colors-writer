@@ -61,5 +61,6 @@ Example usage:
 
 ```vim
 let g:writer_theme = 'dark'
-let g:writer_font = 'Consolas:h18'
+let g:writer_font = 'Source\\ Code\\ Pro:h18'
 ```
+

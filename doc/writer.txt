@@ -56,8 +56,11 @@ To choose default wrapping mode, accepts 'hard' (default) or 'soft':
     let g:writer_wrap = 'soft'                                                ~
 
 To choose which font to use as default, use the same format as `set guifont`:
+with the exception of double escaping any spaces.
 
     let g:writer_font = "Consolas:h18"                                        ~
+    let g:writer_font = "Source\\ Code\\ Pro:h18"                                        ~
 
 
 vim:tw=78:et:ft=help:norl:
+
